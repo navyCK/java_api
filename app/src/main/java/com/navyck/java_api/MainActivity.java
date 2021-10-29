@@ -2,10 +2,14 @@ package com.navyck.java_api;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.naver.maps.map.MapView;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -19,6 +23,7 @@ import java.util.Timer;
 public class MainActivity extends AppCompatActivity {
     EditText edit;
     TextView text;
+    Button button;
     XmlPullParser xpp;
 
     String key="DjnQQqRta39pg8bL0mr%2BIcCEvfhV73ZIkPrMSXQI6v6HfAV5cMn2FDPr%2FETmNcfScco9zHRv197FxGlFzGBdyw%3D%3D";
@@ -29,29 +34,36 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        edit= (EditText)findViewById(R.id.edit);
-        text= (TextView)findViewById(R.id.result);
+//        edit= (EditText)findViewById(R.id.edit);
+//        text= (TextView)findViewById(R.id.result);
+//        button = findViewById(R.id.button);
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(MainActivity.this, MapFragmentActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+
     }
 
-    public void mOnClick(View v){
-        switch (v.getId()){
-            case R.id.button:
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        data=getXmlData();
-
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                text.setText(data);
-                            }
-                        });
-                    }
-                }).start();
-                break;
-        }
-    }
+//    public void mOnClick(View v){
+//        if (v.getId() == R.id.button) {
+//            new Thread(new Runnable() {
+//                @Override
+//                public void run() {
+//                    data = getXmlData();
+//
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//                            text.setText(data);
+//                        }
+//                    });
+//                }
+//            }).start();
+//        }
+//    }
 
     String getXmlData(){
         StringBuffer buffer=new StringBuffer();
