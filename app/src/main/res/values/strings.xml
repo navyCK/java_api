@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">java_api</string>
+    <string name="elecCharge">전기차 충전소</string>
 </resources>

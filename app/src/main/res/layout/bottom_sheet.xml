@@ -17,9 +17,9 @@
     <TextView
         android:id="@+id/bottomSheetTitleTextView"
         android:gravity="center"
-        android:text="전기차 충전소"
+        android:text="@string/elecCharge"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:layout_width="match_parent"
         android:layout_height="100dp"
