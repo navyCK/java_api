@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         buffer.append("파싱 끝\n");
-        return buffer.toString();//StringBuffer 문자열 객체 반환
+        return buffer.toString();
 
-    }//getXmlData method....
+    }
 }
