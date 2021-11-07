@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.naver.maps.map.MapView;
+import com.naver.maps.map.NaverMap;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
@@ -182,4 +183,7 @@ public class MainActivity extends AppCompatActivity {
         return buffer.toString();
 
     }
+
+
+
 }
