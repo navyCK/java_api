@@ -34,37 +34,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-//        edit= (EditText)findViewById(R.id.edit);
-//        text= (TextView)findViewById(R.id.result);
-//        button = findViewById(R.id.button);
-//        button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(MainActivity.this, MapFragmentActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
     }
-
-//    public void mOnClick(View v){
-//        if (v.getId() == R.id.button) {
-//            new Thread(new Runnable() {
-//                @Override
-//                public void run() {
-//                    data = getXmlData();
-//
-//                    runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            text.setText(data);
-//                        }
-//                    });
-//                }
-//            }).start();
-//        }
-//    }
 
     String getXmlData(){
         StringBuffer buffer=new StringBuffer();
