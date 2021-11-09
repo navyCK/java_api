@@ -3,7 +3,11 @@ package com.navyck.java_api;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraUpdate;
 import com.naver.maps.map.MapView;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MapFragmentActivity extends AppCompatActivity {
     private MapView mapView;
+    private NaverMap naverMap;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,7 +23,19 @@ public class MapFragmentActivity extends AppCompatActivity {
         setContentView(R.layout.fragment_map);
 
         mapView = findViewById(R.id.map_view);
+        mapView.getMapAsync((OnMapReadyCallback) this);
         mapView.onCreate(savedInstanceState);
+    }
+
+    protected void onMapReady(NaverMap map) {
+        naverMap = map;
+        naverMap.setMaxZoom(18.0);
+        naverMap.setMinZoom(10.0);
+
+        LatLng latLng = new LatLng(37.497801, 127.027591);
+        CameraUpdate cameraUpdate = CameraUpdate.scrollTo(latLng);
+        naverMap.moveCamera(cameraUpdate);
+
     }
 
     @Override
