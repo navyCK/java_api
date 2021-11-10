@@ -8,6 +8,7 @@ import com.naver.maps.map.CameraUpdate;
 import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.UiSettings;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,6 +36,9 @@ public class MapFragmentActivity extends AppCompatActivity {
         LatLng latLng = new LatLng(37.497801, 127.027591);
         CameraUpdate cameraUpdate = CameraUpdate.scrollTo(latLng);
         naverMap.moveCamera(cameraUpdate);
+
+        UiSettings uiSettings = naverMap.getUiSettings();
+        uiSettings.isLocationButtonEnabled();
 
     }
 
