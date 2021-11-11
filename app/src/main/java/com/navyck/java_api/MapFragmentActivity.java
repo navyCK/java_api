@@ -9,6 +9,7 @@ import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.UiSettings;
+import com.naver.maps.map.util.FusedLocationSource;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,6 +40,8 @@ public class MapFragmentActivity extends AppCompatActivity {
 
         UiSettings uiSettings = naverMap.getUiSettings();
         uiSettings.isLocationButtonEnabled();
+
+
 
     }
 
