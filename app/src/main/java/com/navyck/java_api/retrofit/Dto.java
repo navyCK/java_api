@@ -12,6 +12,5 @@ class Model {
     String price;
     Double lat;
     Double lng;
-    String imgUrl;
 
 }
