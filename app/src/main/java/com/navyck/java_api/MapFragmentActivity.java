@@ -29,21 +29,21 @@ public class MapFragmentActivity extends AppCompatActivity {
         mapView.onCreate(savedInstanceState);
     }
 
-    protected void onMapReady(NaverMap map) {
-        naverMap = map;
-        naverMap.setMaxZoom(18.0);
-        naverMap.setMinZoom(10.0);
-
-        LatLng latLng = new LatLng(37.497801, 127.027591);
-        CameraUpdate cameraUpdate = CameraUpdate.scrollTo(latLng);
-        naverMap.moveCamera(cameraUpdate);
-
-        UiSettings uiSettings = naverMap.getUiSettings();
-        uiSettings.isLocationButtonEnabled();
-
-
-
-    }
+//    protected void onMapReady(NaverMap map) {
+//        naverMap = map;
+//        naverMap.setMaxZoom(18.0);
+//        naverMap.setMinZoom(10.0);
+//
+//        LatLng latLng = new LatLng(37.497801, 127.027591);
+//        CameraUpdate cameraUpdate = CameraUpdate.scrollTo(latLng);
+//        naverMap.moveCamera(cameraUpdate);
+//
+//        UiSettings uiSettings = naverMap.getUiSettings();
+//        uiSettings.isLocationButtonEnabled();
+//
+//
+//
+//    }
 
     @Override
     protected void onStart() {
